@@ -6,7 +6,7 @@ package edu.gatech.oad.antlab.person;
  *  modified string 
  *
  * @author Aviva Kern
- * @version 1.1
+ * @version 1.1 
  */
 
 import java.util.Random;
