@@ -5,9 +5,12 @@ package edu.gatech.oad.antlab.person;
  *  returns their name and a
  *  modified string 
  *
- * @author Bob
- * @version 1.1
+ * @author Aviva Kern
+ * @version 1.1 
  */
+
+import java.util.Random;
+
 public class Person2 {
     /** Holds the persons real name */
     private String name;
@@ -29,9 +32,22 @@ public class Person2 {
 	 * @param input the string to be modified
 	 * @return the modified string
 	 */
-	private String calc(String input) {
+	private String calc(String input) { 
 	  //Person 2 put your implementation here
-	  return null;
+		String[] arr = new String[input.length()];
+		Random rand = new Random();
+		for (int i = 0; i < input.length(); i++) {
+		    int spot = rand.nextInt(input.length());
+		    while (arr[spot] != null){
+			spot = rand.nextInt(input.length());
+		    }
+		    arr[spot] = input.substring(i, i + 1);
+		}
+		String output = "";
+		for (int i = 0; i < arr.length; i++) {
+		    output += arr[i];
+		}
+		return output;
 	}
 	/**
 	 * Return a string rep of this object
